@@ -60,5 +60,3 @@ async function getUsers(names) {
     return results;
 }
 
-
-const tab = 1
