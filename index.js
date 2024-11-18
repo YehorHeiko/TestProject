@@ -61,4 +61,3 @@ async function getUsers(names) {
 }
 
 
-let consts = 1;
