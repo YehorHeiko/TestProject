@@ -1,11 +1,11 @@
-// const port = 5010;
-// const { log } = require('console');
-// const { readFileSync } = require('fs');
-// const http = require('http');
-// const { parse } = require('querystring');
-// const server = new http.Server
-// const icon = readFileSync('favicon.ico')
-// const users = [{login: 'admin', password: '123'}]
+const port = 5010;
+const { log } = require('console');
+const { readFileSync } = require('fs');
+const http = require('http');
+const { parse } = require('querystring');
+const server = new http.Server
+const icon = readFileSync('favicon.ico')
+const users = [{login: 'admin', password: '123'}]
 
 // server.listen(port, () => {
 //     log('http://localhost:' + port)
