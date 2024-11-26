@@ -46,11 +46,14 @@
 // function renderUsers(html) {
 //     return html.toString().replace('{users}', users.map((user) => `<li>${user.login}</li>`).join(''))
 // }
-
-function makePackage(5) {
-    const num = 5;
-    if ()
+function isTidy(num) {
+  let f = num[0] /// A
+  for (let i = 0; i < num.length; i++) {
+    if (f < num[i]) {
+      f = num.length + 1
+      console.log(f);
+    }
+      
+    }
   }
-  
-
-
+  isTidy('ASD')
