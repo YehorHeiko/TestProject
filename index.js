@@ -58,25 +58,31 @@
 //   isTidy('ASD')
 
 
-const robot = {
-  version: 16,
-  name: 'Cleaner 3000',
-  released: true,
-  author: { name: 'Vlad' },
-};
-const robot2 = {
-  version: 16,
-  name: 'Cleaner 3000',
-  released: true,
-  author: { name: 'Vlad' },
-};
+// const robot = {
+//   aiStaff: []
+// };
+// const robot2 = {
+//   id: 1,
+//   currentWorkPlace: Odessa,
+// };
 
-function makeRobotsPair(robot1, robot2) {
-  
+const kolli = { Kolli: 'name', 123: 'chipVer', 3: 'wheels' };
+
+function inverseRobot(robot) {
+  const obj = {};
+
+  for (const [key, value] of Object.entries(robot)) {
+    obj[value] = key;
+    
+    if (obj[value]) {
+      return null;
+    }
+  }
+
+  return obj;
 }
 
 
-
-getRobotSchema(robot, robot2)
+inverseRobot(kolli);
 
 
