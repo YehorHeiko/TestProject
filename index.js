@@ -46,14 +46,37 @@
 // function renderUsers(html) {
 //     return html.toString().replace('{users}', users.map((user) => `<li>${user.login}</li>`).join(''))
 // }
-function isTidy(num) {
-  let f = num[0] /// A
-  for (let i = 0; i < num.length; i++) {
-    if (f < num[i]) {
-      f = num.length + 1
-      console.log(f);
-    }
-      
-    }
-  }
-  isTidy('ASD')
+// function isTidy(num) {
+//   let f = [] /// A
+//   for (let i = 0; i < num.length; i++) {
+//     f.push(num[i])      
+
+//     }
+
+//     console.log(f);
+//   }
+//   isTidy('ASD')
+
+
+const robot = {
+  version: 16,
+  name: 'Cleaner 3000',
+  released: true,
+  author: { name: 'Vlad' },
+};
+const robot2 = {
+  version: 16,
+  name: 'Cleaner 3000',
+  released: true,
+  author: { name: 'Vlad' },
+};
+
+function makeRobotsPair(robot1, robot2) {
+  
+}
+
+
+
+getRobotSchema(robot, robot2)
+
+
