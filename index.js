@@ -66,23 +66,43 @@
 //   currentWorkPlace: Odessa,
 // };
 
-const kolli = { Kolli: 'name', 123: 'chipVer', 3: 'wheels' };
+const actions = [
+  {
+    type: 'addProperties', // додавання властивостей
+    extraData: { // властивості, які слід додати до стану
+      key1: 'value1',
+      key2: 'value2',
+    },
+  },
+  {
+    type: 'removeProperties', // видалення властивостей
+    keysToRemove: ['key1', 'key2'], // ключі, які слід видалити зі стану
+  },
+  {
+    type: 'clear', // стан має стати порожнім після виконання цієї дії
+  },
+];
+const state = { foo: 'bar', bar: 'foo' };
 
-function inverseRobot(robot) {
-  const obj = {};
-
-  for (const [key, value] of Object.entries(robot)) {
-    obj[value] = key;
-    
-    if (obj[value]) {
-      return null;
-    }
+function transformState(state, actions) {
+  for (let key of Object.keys(actions)) {
+    let st = actions[key];    
+      for (let [key, value] of Object.entries(st)) {
+        if (value == 'addProperties') {
+          for (let [key, value] of Object.entries(st.extraData)) {
+            state[key] = value;
+          }
+        }
+        else if (value == 'removeProperties') {
+          for (let i = 0; i < st.keysToRemove.length; i++) {
+            delete state[st.keysToRemove[i]];
+          }
+        }
+      }
   }
-
-  return obj;
 }
 
+transformState(state, actions);
 
-inverseRobot(kolli);
-
+Object.values
 
