@@ -97,7 +97,6 @@ function transformState(state, actions) {
           for (let i = 0; i < st.keysToRemove.length; i++) {
             delete state[st.keysToRemove[i]];
           }
-          
         }
       }
   }
