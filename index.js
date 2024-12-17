@@ -66,43 +66,21 @@
 //   currentWorkPlace: Odessa,
 // };
 
-const actions = [
-  {
-    type: 'addProperties', // додавання властивостей
-    extraData: { // властивості, які слід додати до стану
-      key1: 'value1',
-      key2: 'value2',
-    },
-  },
-  {
-    type: 'removeProperties', // видалення властивостей
-    keysToRemove: ['key1', 'key2'], // ключі, які слід видалити зі стану
-  },
-  {
-    type: 'clear', // стан має стати порожнім після виконання цієї дії
-  },
-];
-const state = { foo: 'bar', bar: 'foo' };
+numbers = [1, 2, 3]
 
-function transformState(state, actions) {
-  for (let key of Object.keys(actions)) {
-    let st = actions[key];    
-      for (let [key, value] of Object.entries(st)) {
-        if (value == 'addProperties') {
-          for (let [key, value] of Object.entries(st.extraData)) {
-            state[key] = value;
-          }
-        }
-        else if (value == 'removeProperties') {
-          for (let i = 0; i < st.keysToRemove.length; i++) {
-            delete state[st.keysToRemove[i]];
-          }
-        }
-      }
+Array.prototype.pushS = function (...val) {
+  for (const arg of val) {
+    this[this.length] = arg
+    
   }
+  return this.length
+};
+
+numbers.pushS(1, 2, 3);
+console.log(numbers);
+
+Array.prototype.myPop = function () {
+  const last = this[this.length - 1];
+  this.length--;
+  return last
 }
-
-transformState(state, actions);
-
-Object.values
-
