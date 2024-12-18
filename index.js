@@ -66,21 +66,9 @@
 //   currentWorkPlace: Odessa,
 // };
 
-numbers = [1, 2, 3]
+const wish = `I want a short stylish haircut, like my brother's`;
 
-Array.prototype.pushS = function (...val) {
-  for (const arg of val) {
-    this[this.length] = arg
-    
-  }
-  return this.length
-};
+formatDate(wish)
 
-numbers.pushS(1, 2, 3);
-console.log(numbers);
 
-Array.prototype.myPop = function () {
-  const last = this[this.length - 1];
-  this.length--;
-  return last
-}
+wish.split(' ').reverse().join(' ')
