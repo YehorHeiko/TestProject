@@ -70,6 +70,4 @@ const wish = `I want a short stylish haircut, like my brother's`;
 
 formatDate(wish)
 
-
-
 wish.split(' ').reverse().join(' ')
