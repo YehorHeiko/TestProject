@@ -66,8 +66,17 @@
 //   currentWorkPlace: Odessa,
 // };
 
-const wish = `I want a short stylish haircut, like my brother's`;
+const wish = [1, 2, 3, 0, 0, 2, 0, 1, -1]
 
-formatDate(wish)
+  function finei(wish) {
+    for (let i = 0; i < wish.length; i++) {
+      if (wish[i] + wish[i + 1] === 0) {
+        console.log(i, i +1);
+      }
+      else {
+        console.log('no');
+      }
+    }
+  }
 
-wish.split(' ').reverse().join(' ')
+finei(wish)
