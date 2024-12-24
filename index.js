@@ -66,17 +66,11 @@
 //   currentWorkPlace: Odessa,
 // };
 
-const wish = [1, 2, 3, 0, 0, 2, 0, 1, -1]
+const wish = [
+  { id: 118, firstName: 'Jan', lastName: 'Rycke' },
+  { id: 101, firstName: 'Lee', lastName: 'Haverbeke' },
+  { id: 114, firstName: 'Clara', lastName: 'Aernoudts' },
+  { id: 201, firstName: 'Anna', lastName: 'Bernardus' },
+ ];
 
-  function finei(wish) {
-    for (let i = 0; i < wish.length; i++) {
-      if (wish[i] + wish[i + 1] === 0) {
-        console.log(i, i +1);
-      }
-      else {
-        console.log('no');
-      }
-    }
-  }
-
-finei(wish)
+wish.sort((a, b) => console.log(a, b));
