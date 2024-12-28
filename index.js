@@ -73,4 +73,6 @@ const wish = [
   { id: 201, firstName: 'Anna', lastName: 'Bernardus' },
  ];
 
+
+ 
 wish.sort((a, b) => console.log(a, b));
